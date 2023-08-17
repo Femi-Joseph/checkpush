@@ -1,0 +1,45 @@
+{% extends 'base.html'%} {%load static%} {%block content%}
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<link href="{%static 'css/style1.css '%}" rel="stylesheet" />
+
+<h2 style="text-align: center">CLIENT PROFILE CARD</h2>
+<br />
+<br />
+<form action="/" enctype="multipart/form-data">
+  {%for i in obj1%}
+  <div class="card">
+    <img src="{{i.photo.url}}" alt="" style="width: 100%" />
+
+    <h2
+      class="name"
+      style="
+         {
+          text-align: center;
+        }
+      "
+    >
+      {{i.clientname}}
+    </h2>
+
+    <p>E-MAIL ID:{{i.email}}</p>
+    <p>CONTACT NO:{{i.contact}}</p>
+    <p>DOB:{{obj.dob}}</p>
+    <p>GENDER:{{obj.gender}}</p>
+    <p>ADDRESS:{{obj.adress}}</p>
+    <p>DISTRIC:{{obj.district}}</p>
+    <p>CONTRY:{{obj.contry}}</p>
+    <p>PINCODE:{{obj.pincode}}</p>
+    <p>EDUCATION:{{obj.education}}</p>
+    <p>AADHAR NO:{{i.aadhar}}</p>
+
+    <div class="pro_logo">
+      <img src="{%static 'img/logo.png'%}" alt="" />
+    </div>
+  </div>
+  {%endfor%}
+</form>
+
+{%endblock%}

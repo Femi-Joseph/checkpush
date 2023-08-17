@@ -1,0 +1,44 @@
+
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%static 'css/style1.css'%}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner">
+            <div class="image-holder">
+                <img src="{%static 'img/3d-shap.png'%}" width="300px" height="300px" alt="image">
+
+            </div>
+            <form action="client_login" method="post">
+                {%csrf_token%}
+            <h3>SIGNIN</h3>
+
+            <div class="form-wrapper">
+                <input type="email" placeholder="e-mail" name="email" class="form-control">
+            </div>
+
+
+            <div class="form-wrapper">
+            <input type="password" placeholder="password" name="password" class="form-control">
+            </div>
+
+               
+
+            <button type="submit">LOGIN</button>
+
+            </div>
+            </form>
+
+
+        </div>
+    </div>
+    
+</body>
+</html>
